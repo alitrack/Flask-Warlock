@@ -1,0 +1,34 @@
+TutorialModel:
+  name: 'Tutorial Table Model'
+  description: >
+  columns:
+    tutorialmodelid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+    name:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    description:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    state:
+      dargs: *mdlKWARGa002
+      oargs:
+        size: 10
+TutorialGroupModel:
+  name: 'Tutorial Group Table Model'
+  description: >
+  columns:
+    tutorialgroupmodelid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+    name:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    description:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    state:
+      dargs: *mdlKWARGa002
+      oargs:
+        size: 10

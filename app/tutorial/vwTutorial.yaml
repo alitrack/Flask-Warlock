@@ -1,0 +1,24 @@
+TutorialModelView:
+  datamodel:
+    interface: *IFACEa000
+    model: 'app.models.TutorialModel'
+  registration:
+    class: app.views.TutorialModelView
+    'title': 'List Tutorial'
+    kwargs:
+      'icon': *icon0
+      'category': 'Tutorial'
+      'category_icon': *icon1
+  viewtype: *VIEWa001
+TutorialGroupModelView:
+  datamodel:
+    interface: *IFACEa000
+    model: 'app.models.TutorialGroupModel'
+  registration:
+    class: app.views.TutorialGroupModelView
+    'title': 'List Tutorial Group'
+    kwargs:
+      'icon': *icon0
+      'category': 'Tutorial'
+      'category_icon': *icon1
+  viewtype: *VIEWa001

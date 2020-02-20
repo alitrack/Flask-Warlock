@@ -1,0 +1,137 @@
+CatalogModel:
+  name: 'Catalog Table Model'
+  description: >
+  columns:
+    catalogid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+    name:
+      dargs: *mdlKWARGa001
+      oargs: ''
+ProductModel:
+  name: 'Product Table Model'
+  description: >
+  columns:
+    productid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+    name:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    description:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    state:
+      dargs: *mdlKWARGa002
+      oargs:
+        size: 10
+SpecModel:
+  name: 'Specifications Table Model'
+  description:
+  columns:
+    specid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+    name:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    projects:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    specs:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    documentation:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    models:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    reviews:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    codeid:
+      dargs: *mdlKWARGa002
+      oargs: ''
+SourceCodeModel:
+  name: 'Source Code Table Model'
+  description:
+  columns:
+    codeid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+    name:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    source:
+      dargs: *mdlKWARGa002
+      oargs: ''
+BinaryModel:
+  name:
+  description:
+  columns:
+    binaryid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+    name:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    windows:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    linux:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    android:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    macos:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    ios:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    arduino:
+      dargs: *mdlKWARGa002
+      oargs: ''
+ReviewModel:
+  name:
+  description:
+  columns:
+    reviewid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+    name:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    designers:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    builders:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    members:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    public:
+      dargs: *mdlKWARGa002
+      oargs: ''
+ProcurementModel:
+  name:
+  description:
+  columns:
+    procurementid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+    name:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    source:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    qty:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    price:
+      dargs: *mdlKWARGa002
+      oargs: ''

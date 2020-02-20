@@ -1,0 +1,64 @@
+---
+kwargs:
+  mdlKWARGa000: &mdlKWARGa000
+    type: 'sqlalchemy.Integer'
+    size:
+    kwargs:
+      primary_key: true
+  mdlKWARGa001: &mdlKWARGa001
+    type: 'sqlalchemy.String'
+    size: 50
+    kwargs:
+      primary_key: false
+      unique: true
+      nullable: false
+  mdlKWARGa002: &mdlKWARGa002
+    type: 'sqlalchemy.String'
+    size: 255
+    kwargs:
+      primary_key: false
+      unique: false
+      nullable: true
+  mdlKWARGa003: &mdlKWARGa003
+    type: 'sqlalchemy.Integer'
+    size:
+    kwargs:
+      primary_key: false
+      unique: false
+      nullable: true
+  mdlKWARGa004: &mdlKWARGa004
+    type: 'sqlalchemy.Float'
+    size:
+    kwargs:
+      primary_key: false
+      unique: false
+      nullable: true
+  mdlKWARGa005: &mdlKWARGa005
+    type: 'sqlalchemy.Date'
+    size:
+    kwargs:
+      primary_key: false
+      unique: false
+      nullable: true
+  mdlKWARGa006: &mdlKWARGa006
+    type: 'flask_appbuilder.models.mixins.ImageColumn'
+    size:
+    kwargs:
+      size: [300,300,true]
+      thumbnail_size: [30,30,True]
+models:
+  account: <(INCL)>account/mdlAccount.yaml
+  admin: <(INCL)>admin/mdlAdmin.yaml
+  article: <(INCL)>article/mdlArticle.yaml
+  asset: <(INCL)>asset/mdlAsset.yaml
+  blog: <(INCL)>blog/mdlBlog.yaml
+  calendar: <(INCL)>calendar/mdlCalendar.yaml
+  catalog: <(INCL)>catalog/mdlCatalog.yaml
+  dataset: <(INCL)>dataset/mdlDataset.yaml
+  ecommerce: <(INCL)>ecommerce/mdlECommerce.yaml
+  guide: <(INCL)>guide/mdlGuide.yaml
+  inventory: <(INCL)>inventory/mdlInventory.yaml
+  library: <(INCL)>library/mdlLibrary.yaml
+  loci: <(INCL)>loci/mdlLoci.yaml
+  tutorial: <(INCL)>tutorial/mdlTutorial.yaml
+  workorder: <(INCL)>workorder/mdlWorkorder.yaml

@@ -1,0 +1,48 @@
+CartModelView:
+  datamodel:
+    interface: *IFACEa000
+    model: 'app.models.CartModel'
+  registration:
+    class: app.views.CartModelView
+    'title': 'List Cart'
+    kwargs:
+      'icon': *icon0
+      'category': 'Cart'
+      'category_icon': *icon1
+  viewtype: *VIEWa001
+OrderModelView:
+  datamodel:
+    interface: *IFACEa000
+    model: 'app.models.UserOrderModel'
+  registration:
+    class: app.views.UserOrderModelView
+    'title': 'List User Order'
+    kwargs:
+      'icon': *icon0
+      'category': 'Cart'
+      'category_icon': *icon1
+  viewtype: *VIEWa001
+UserCartModelView:
+  datamodel:
+    interface: *IFACEa000
+    model: 'app.models.UserCartModel'
+  registration:
+    class: app.views.UserCartModelView
+    'title': 'List User Cart'
+    kwargs:
+      'icon': *icon0
+      'category': 'Cart'
+      'category_icon': *icon1
+  viewtype: *VIEWa001
+UserOrderModelView:
+  datamodel:
+    interface: *IFACEa000
+    model: 'app.models.UserOrderModel'
+  registration:
+    class: app.views.UserOrderModelView
+    'title': 'List Order'
+    kwargs:
+      'icon': *icon0
+      'category': 'Order'
+      'category_icon': *icon1
+  viewtype: *VIEWa001

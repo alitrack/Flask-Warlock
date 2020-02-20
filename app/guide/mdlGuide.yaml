@@ -1,0 +1,130 @@
+GuideModel:
+  name: 'Guide Model Table'
+  description: >
+  columns:
+    guideid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+    name:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    uuid:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    seq_title:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    tools:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    video:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    video_length:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    title:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    description:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    tags:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    textid:
+      dargs: *mdlKWARGa002
+      oargs: ''
+GuideGroupModel:
+  name: 'Lesson Group Model Table'
+  description: >
+  columns:
+    guidegroupid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+    name:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    description:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    uuid:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    state:
+      dargs: *mdlKWARGa002
+      oargs:
+        size: 10
+LessonModel:
+  name: 'Lesson Model Table'
+  description: >
+  columns:
+    lessonid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+    name:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    uuid:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    seq_title:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    tools:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    video:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    video_length:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    title:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    description:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    tags:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    textid:
+      dargs: *mdlKWARGa002
+      oargs: ''
+LessonGroupModel:
+  name: 'Lesson Group Model Table'
+  description: >
+  columns:
+    lessongroupid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+    name:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    description:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    uuid:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    state:
+      dargs: *mdlKWARGa002
+      oargs:
+        size: 10
+CodeModel:
+  name: 'Code Model Table'
+  description: >
+  columns:
+    codeid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+    name:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    uuid:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    codeline:
+      dargs: *mdlKWARGa002
+      oargs: ''

@@ -1,0 +1,72 @@
+CatalogModelView:
+  datamodel:
+    interface: *IFACEa000
+    model: 'app.models.CatalogModel'
+  registration:
+    class: app.views.CatalogModelView
+    kwargs:
+      'icon': *icon0
+      'category': 'Catalog'
+      'category_icon': *icon1
+    'title': 'List Catalog'
+  viewtype: *VIEWa001
+ProductModelView:
+  datamodel:
+    interface: *IFACEa000
+    model: 'app.models.ProductModel'
+  registration:
+    class: app.views.ProductModelView
+    'title': 'List Product'
+    kwargs:
+      'icon': *icon0
+      'category': 'Catalog'
+      'category_icon': *icon1
+  viewtype: *VIEWa001
+SpecModelView:
+  datamodel:
+    interface: *IFACEa000
+    model: 'app.models.SpecModel'
+  registration:
+    class: app.views.SpecModelView
+    'title': 'List Specification'
+    kwargs:
+      'icon': *icon0
+      'category': 'Catalog'
+      'category_icon': *icon1
+  viewtype: *VIEWa001
+SourceCodeModelView:
+  datamodel:
+    interface: *IFACEa000
+    model: 'app.models.SourceCodeModel'
+  registration:
+    class: app.views.SourceCodeModelView
+    'title': 'List Code'
+    kwargs:
+      'icon': *icon0
+      'category': 'Catalog'
+      'category_icon': *icon1
+  viewtype: *VIEWa001
+BinaryModelView:
+  datamodel:
+    interface: *IFACEa000
+    model: 'app.models.BinaryModel'
+  registration:
+    class: app.views.BinaryModelView
+    'title': 'List Binary Installer'
+    kwargs:
+      'icon': *icon0
+      'category': 'Catalog'
+      'category_icon': *icon1
+  viewtype: *VIEWa001
+ReviewModelView:
+  datamodel:
+    interface: *IFACEa000
+    model: 'app.models.ReviewModel'
+  registration:
+    class: app.views.ReviewModelView
+    'title': 'List Review'
+    kwargs:
+      'icon': *icon0
+      'category': 'Catalog'
+      'category_icon': *icon1
+  viewtype: *VIEWa001

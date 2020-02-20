@@ -1,0 +1,24 @@
+DatasetModelView:
+  datamodel:
+    interface: *IFACEa000
+    model: 'app.models.DatasetModel'
+  registration:
+    class: 'app.views.DatasetModelView'
+    'title': 'DataSet'
+    kwargs:
+      'icon': *icon0
+      'category': 'Dataset'
+      'category_icon': *icon1
+  viewtype: *VIEWa001
+DatasetDescriptionModelView:
+  datamodel:
+    interface: *IFACEa000
+    model: 'app.models.DatasetModel'
+  registration:
+    class: 'app.views.DatasetModelView'
+    'title': 'DataSet'
+    kwargs:
+      'icon': *icon0
+      'category': 'Dataset'
+      'category_icon': *icon1
+  viewtype: *VIEWa001

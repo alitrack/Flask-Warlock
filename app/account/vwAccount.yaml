@@ -1,0 +1,89 @@
+UserModelView:
+  datamodel:
+    interface: *IFACEa000
+    model: 'app.models.UserModel'
+  registration:
+    class: 'app.views.UserModelView'
+    'title': 'List User'
+    kwargs:
+      'icon': *icon0
+      'category': 'User'
+      'category_icon': *icon1
+  viewtype: *VIEWa001
+UserGroupModelView:
+  datamodel:
+    interface: *IFACEa000
+    model: 'app.models.UserGroupModel'
+  registration:
+    class: 'app.views.UserGroupModelView'
+    'title': 'List User Groups'
+    kwargs:
+      'icon': *icon0
+      'category': 'User'
+      'category_icon': *icon1
+  viewtype: *VIEWa001
+UserAccountModelView:
+  datamodel:
+    interface: *IFACEa000
+    model: 'app.models.UserAccountModel'
+  registration:
+    class: 'app.views.UserAccountModelView'
+    'title': 'List Account'
+    kwargs:
+      'icon': *icon0
+      'category': 'User'
+      'category_icon': *icon1
+  viewtype: *VIEWa001
+UserAddressModelView:
+  datamodel:
+    interface: *IFACEa000
+    model: 'app.models.UserAddressModel'
+  registration:
+    class: 'app.views.UserAddressModelView'
+    'title': 'List User Address'
+    kwargs:
+      'icon': *icon0
+      'category': 'User'
+      'category_icon': *icon1
+  viewtype: *VIEWa001
+UserPhoneModelView:
+  datamodel:
+    interface: *IFACEa000
+    model: 'app.models.UserPhoneModel'
+  registration:
+    class: 'app.views.UserPhoneModelView'
+    'title': 'List User Phone'
+    kwargs:
+      'icon': *icon0
+      'category': 'User'
+      'category_icon': *icon1
+  viewtype: *VIEWa001
+UserEmailModelView:
+  datamodel:
+    interface: *IFACEa000
+    model: 'app.models.UserEmailModel'
+  registration:
+    class: 'app.views.UserEmailModelView'
+    'title': 'List User Email'
+    kwargs:
+      'icon': *icon0
+      'category': 'User'
+      'category_icon': *icon1
+  viewtype: *VIEWa001
+# templates:
+#   -
+#     editRegisterACCOUNT:
+#       name:
+#       description: >
+#       text: |
+#         {% extends "appbuilder/base.html" %}
+#         {% block content %}
+#         {% endblock %}
+#   -
+#     viewUserACCOUNT:
+#       name:
+#       description: >
+#       text: |
+#         {% extends "appbuilder/base.html" %}
+#         {% block content %}
+#         {% endblock %}

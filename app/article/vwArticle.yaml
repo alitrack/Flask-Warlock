@@ -1,0 +1,32 @@
+ArticleModelView:
+  datamodel:
+    interface: *IFACEa000
+    model: 'app.models.ArticleModel'
+  registration:
+    class: 'app.views.ArticleModelView'
+    'title': 'List Articles'
+    kwargs:
+      'icon': *icon0
+      'category': 'Article'
+      'category_icon': *icon1
+  viewtype: *VIEWa001
+# templates:
+#   -
+#     readPublicARTICLE:
+#       name: Read Public Article Template
+#       description: >
+#         Template for displaying articles in a format optimizaed for reading
+#
+#       text: |
+#         {% extends "appbuilder/base.html" %}
+#         {% block content %}
+#             <h1>{{name}}</h1>
+#
+#         		<h2>{{description}}</h2>
+#
+#         		<h2>{{specs}}</h2>
+#         		<h3>{{documentation}}</h3>
+#         		<h3>{{models}}</h3>
+#
+#         		<h2>{{reviews}}</h2>
+#         {% endblock %}

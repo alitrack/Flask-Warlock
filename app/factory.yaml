@@ -1,0 +1,282 @@
+---
+<(META)>:
+  DOCid:
+  name:
+  description: >
+  expirary: <[expiration]>
+  version: <[version]>
+  path: <[LEXIvrs]>beaver/ngynFalsk/models.yaml
+  outline: <[outline]>
+  authority: document|this
+  security: sec|lvl2
+  <(WT)>: -32
+BPa000: &BPa000
+  template_folder: templates
+  static_folder: static
+blueprints:
+  accounts: &accounts
+    args:
+      name:
+    kwargs: &BPa000
+    registration: app.accounts.routes.account_blueprint
+  admin: &admin
+    args:
+      name:
+    kwargs: &BPa000
+    registration: app.admin.routes.admin_blueprint
+  assets: &assets
+    args:
+      name:
+    kwargs: &BPa000
+    registration: app.assets.routes.assets_blueprint
+  blog: &blog
+    args:
+      name:
+    kwargs: &BPa000
+    registration: app.blog.routes.blog_blueprint
+  calendar: &calendar
+    args:
+      name:
+    kwargs: &BPa000
+    registration: app.calendar.routes.calendar_blueprint
+  catalog: &catalog
+    args:
+      name:
+    kwargs: &BPa000
+    registration: app.catalog.routes.catalog_blueprint
+  ecommerce: &ecommerce
+    args:
+      name:
+    kwargs: &BPa000
+    registration: app.ecommerce.routes.ecommerce_blueprint
+  library: &library
+    args:
+        name:
+    kwargs: &BPa000
+    registration: app.library.routes.library_blueprint
+  public: &public
+    args:
+        name:
+    kwargs: &BPa000
+    registration: app.public.routes.public_blueprint
+  reports: &reports
+    args:
+        name:
+    kwargs: &BPa000
+    registration: app.reports.routes.reports_blueprint
+  tutorials: &tutorials
+    args:
+      name:
+    kwargs: &BPa000
+    registration: app.tutorials.routes.tutorials_blueprint
+
+models:
+  kwargs:
+    KWARGa000: &mdlKWARGa000
+      type: 'sqlalchemy.Integer'
+      size:
+      kwargs:
+        primary_key: True
+        unique: True
+        nullable: False
+    KWARGa001: &mdlKWARGa001
+      type: 'sqlalchemy.String'
+      size: 50
+      kwargs:
+        primary_key: False
+        unique: True
+        nullable: False
+    KWARGa002: &mdlKWARGa002
+      type: 'sqlalchemy.String'
+      size: 255
+      kwargs:
+        primary_key: False
+        unique: False
+        nullable: True
+    KWARGa003: &mdlKWARGa003
+      type: 'sqlalchemy.Integer'
+      size:
+      kwargs:
+        primary_key: False
+        unique: False
+        nullable: True
+    KWARGa004: &mdlKWARGa004
+      type: 'sqlalchemy.Float'
+      size:
+      kwargs:
+        primary_key: False
+        unique: False
+        nullable: True
+    KWARGa005: &mdlKWARGa005
+      type: 'sqlalchemy.Date'
+      size:
+      kwargs:
+        primary_key: False
+        unique: False
+        nullable: True
+  <(PATHs)>:
+    - <[here]>accounts/mdlAcct.yaml
+    - <[here]>admin/mdlAdmin.yaml
+    - <[here]>asset/mdlAsset.yaml
+    - <[here]>blog/mdlBlog.yaml
+    - <[here]>calendar/mdlCalendar.yaml
+    - <[here]>catalog/mdlCatalog.yaml
+    - <[here]>ecommerce/mdleCommerce.yaml
+    - <[here]>library/mdlLibrary.yaml
+    - <[here]>public/mdlPublic.yaml
+    - <[here]>reports/mdlReports.yaml
+    - <[here]>tutorials/mdlTutorials.yaml
+baseviews:
+  - &VIEWa000 'flask_appbuilder.BaseView'
+  - &VIEWa001 'flask_appbuilder.ModelView'
+  - &VIEWa002 'flask_appbuilder.charts.views.DirectByChartView'
+  - &VIEWa003 'flask_appbuilder.charts.views.GroupByChartView'
+
+icons:
+  - &icon0 "fa-folder-open-o"
+  - &icon1 "fa-envelope"
+
+interfaces:
+  SQLAlchemyInterface: &IFACEa000 'flask_appbuilder.models.sqla.interface.SQLAInterface'
+  JSONInterface:
+  YAMLInterface:
+  ARKInterface:
+  BTCInterface:
+  ETHInterface:
+  TRONInterface:
+
+templates:
+  tmpltModelView:
+    datamodel:
+      interface:
+      model:
+    form:
+    registration:
+      class:
+      title:
+      kwargs:
+        'icon':
+        'category':
+        'category_icon':
+    viewtype: *VIEWa001
+  tmpltBaseView:
+    registration:
+      class:
+      title:
+      kwargs:
+        'icon':
+        'category':
+        'category_icon':
+    viewtype: *VIEWa001
+  tmpltDirectByChartView:
+    datamodel:
+      interface:
+      model:
+    chart_title:
+    definitions:
+      -
+        'label': <[label]>
+        'group': <[group]>
+        'series': [<@[series.:,]@>]
+    registration:
+      class:
+      title:
+      kwargs:
+        'icon':
+        'category':
+        'category_icon':
+    viewtype: *VIEWa001
+  tmpltGroupByChartView:
+    datamodel:
+      interface:
+      model:
+    chart_title:
+    definitions:
+      -
+        'label': <[label]>
+        'group': <[group]>
+        'formatter':
+        'series': [<@[series.:,]@>]
+    registration:
+      class:
+      title:
+      kwargs:
+        'icon':
+        'category':
+        'category_icon':
+    viewtype: *VIEWa001
+views:
+  SimpleView:
+    route_base: '/simpleview'
+    methods:
+      method1:
+        decorators:
+          expose: '/method1/<string:param1>'
+        def:
+          param1
+        args:
+          param1
+        kwargs:
+        render:
+          args:
+          kwargs:
+            title:
+            template:
+            session_variable:
+    registration:
+      class: 'app.views.SimpleView'
+      kwargs:
+        'category': 'Simple'
+      links:
+        category:
+        href:
+      title: 'Simple View'
+    viewtype: *VIEWa000
+  CatalogModelView:
+    datamodel:
+      interface: *IFACEa000
+      model: app.models.Catalog
+    registration:
+      class: app.views.CatalogModelView
+      kwargs:
+        'icon': *icon0
+        'category': 'Product'
+        'category_icon': *icon1
+      'title': 'List Catalog'
+    viewtype: *VIEWa001
+  ProductModelView:
+    datamodel:
+      interface: *IFACEa000
+      model: app.models.Product
+    registration:
+      class: app.views.ProductModelView
+      'title': 'List Product'
+      kwargs:
+        'icon': *icon0
+        'category': 'Product'
+        'category_icon': *icon1
+    viewtype: *VIEWa001
+  TutorialModelView:
+    datamodel:
+      interface: *IFACEa000
+      model: app.models.Tutorial
+    registration:
+      class: app.views.TutorialModelView
+      'title': 'List Tutorial'
+      kwargs:
+        'icon': *icon0
+        'category': 'Tutorial'
+        'category_icon': *icon1
+    viewtype: *VIEWa001
+  TutorialGroupModelView:
+    datamodel:
+      interface: *IFACEa000
+      model: app.models.TutorialGroup
+    registration:
+      class: app.views.TutorialGroupModelView
+      'title': 'List Tutorial Group'
+      kwargs:
+        'icon': *icon0
+        'category': 'Tutorial'
+        'category_icon': *icon1
+    viewtype: *VIEWa001

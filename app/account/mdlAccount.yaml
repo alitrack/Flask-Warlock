@@ -1,0 +1,206 @@
+UserModel:
+  name: 'User Model Table'
+  description: >
+    'Table for storing unique site users and unique details about that user'
+  columns:
+    userid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+    acctid:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    username:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    description:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    uuid:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    first_name:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    last_name:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    avatar:
+      dargs: *mdlKWARGa005
+      oargs: ''
+    state:
+      dargs: *mdlKWARGa002
+      oargs:
+        size: 10
+  methods:
+    - photo_img:
+        url: 'UserModelView.show'
+        g000: self.userid
+        g001: self.avatar
+    - photo_img_thumbnail:
+        g000: self.userid
+        g001: self.avatar
+UserGroupModel:
+  name: 'User Group Model Table'
+  description: >
+  columns:
+    usergroupid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+    userid:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    name:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    description:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    uuid:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    state:
+      dargs: *mdlKWARGa002
+      oargs:
+        size: 10
+  methods:
+UserAccountModel:
+  name: 'User Accounts Model Table'
+  description: >
+    'Table for storing account information for user'
+  columns:
+    useraccountid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+    userid:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    name:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    description:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    state:
+      dargs: *mdlKWARGa001
+      oargs: ''
+  methods:
+UserAddressModel:
+  name: 'User Street Addresses'
+  description: >
+  columns:
+    useraddressid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+    userid:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    username:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    description:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    uuid:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    number:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    street:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    city:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    state:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    zipcode:
+      dargs: *mdlKWARGa002
+      oargs: ''
+  methods:
+UserPhoneModel:
+  name: 'User Phones Model Table'
+  description: >
+  columns:
+    userphoneid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+    userid:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    name:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    description:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    uuid:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    number:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    state:
+      dargs: *mdlKWARGa002
+      oargs:
+        size: 10
+  methods:
+UserEmailModel:
+  name: 'User Emails Model Table'
+  description: >
+  columns:
+    useremailid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+    userid:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    name:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    description:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    uuid:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    address:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    state:
+      dargs: *mdlKWARGa002
+      oargs:
+        size: 10
+  methods:
+GenderModel:
+  name: 'Gender Model Table'
+  description: >
+  columns:
+    genderid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+    name:
+      dargs: *mdlKWARGa001
+      oargs: ''
+  methods:
+PaymentMethodsModel:
+  name: 'Payments Methods Model Table'
+  description: >
+  columns:
+    paymentmethodsid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+    userid:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    name:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    description:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    uuid:
+      dargs: *mdlKWARGa002
+      oargs: ''
+  methods:

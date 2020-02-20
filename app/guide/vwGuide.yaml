@@ -1,0 +1,75 @@
+
+
+#
+# BaseGuideView:
+#   registration:
+#     class: 'pyAutodExcel'
+#     view:
+#       title: 'Seq000'
+#       kwargs:
+#         'icon': ''
+#         'category': 'Software'
+#         'category_icon': ''
+#         'label': ''
+#     link:
+#       title: 'Seq001'
+#       kwargs:
+#         'icon': ''
+#         'category': 'Software'
+#         'category_icon': ''
+#         'href': '/pyautodexcel/seq001'
+#         'label': ''
+# class TestView(BaseView):
+#   default_view = 'testPage'
+#   @expose('/')
+#   @has_access
+#   def testPage(self):
+#     return (self.render_template("testPage.html"))#	||
+GuideModelView:
+  datamodel:
+    interface: *IFACEa000
+    model: 'app.models.GuideModel'
+  registration:
+    class: app.views.GuideModelView
+    'title': 'List Guide'
+    kwargs:
+      'icon': *icon0
+      'category': 'Tutorial'
+      'category_icon': *icon1
+  viewtype: *VIEWa001
+GuideGroupModelView:
+  datamodel:
+    interface: *IFACEa000
+    model: 'app.models.GuideGroupModel'
+  registration:
+    class: app.views.GuideGroupModelView
+    'title': 'List Guide Groups'
+    kwargs:
+      'icon': *icon0
+      'category': 'Tutorial'
+      'category_icon': *icon1
+  viewtype: *VIEWa001
+LessonModelView:
+  datamodel:
+    interface: *IFACEa000
+    model: 'app.models.LessonModel'
+  registration:
+    class: app.views.LessonModelView
+    'title': 'List Lesson'
+    kwargs:
+      'icon': *icon0
+      'category': 'Tutorial'
+      'category_icon': *icon1
+  viewtype: *VIEWa001
+LessonGroupModelView:
+  datamodel:
+    interface: *IFACEa000
+    model: 'app.models.LessonGroupModel'
+  registration:
+    class: app.views.LessonGroupModelView
+    'title': 'List Lesson Groups'
+    kwargs:
+      'icon': *icon0
+      'category': 'Tutorial'
+      'category_icon': *icon1
+  viewtype: *VIEWa001

@@ -1,0 +1,208 @@
+{% extends "appbuilder/base.html" %}
+{% block content %}
+<h1>000 SetupEnvironment:</h1>
+
+how: cli
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/88LaX3QmLaA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    length: 1:42
+
+<h2>Setup Environment</h2>
+
+description: >
+  Setup Python environment using Virtualenv and Jupyter Notebook
+
+tags: [python, python3, excel, virtualenv, office, automate, jupyter notebook, linux]
+
+
+<code>sudo apt install virtualenv</code>
+#
+<code>sudo apt install python3-pip</code>
+#
+<code>mkdir ENVs</code>
+#
+<code>mkdir ENVs/newENV</code>
+#
+<code>virtualenv -p /usr/bin/python3.6 ENVs/newENV</code>
+#
+<code>source ENVs/newENV/bin/activate</code>
+#
+<code>pip3 install jupyter</code>
+#
+<code>pip3 install openpyxl</code>
+
+<h1>001 CreateWorkbook:</h1>
+  how: ipynb
+  video:
+    length: 2:40
+    name: 001 Create Workbook
+    description: >
+      Create an Excel formatted spreadsheet workbook using Python
+    tags: [python, python3, excel, virtualenv, office, automate, jupyter notebook, linux]
+
+# Import Modules
+<code>import os<code>
+<code>import openpyxl as xl</code>
+
+## Set Working Directory
+
+<code>here = os.getcwd()</code>
+
+## Create Workbook
+
+<code>wb = xl.Workbook()</code>
+
+## Create Worksheets
+
+<code>sheet = wb.create_sheet(title='MySheet')</code>
+
+## Save WorkBook
+
+<code>wb.save(filename='{0}/MyWorkbook.xlsx'.format(here))</code>
+
+###### You should now have a workbook in your working directory named NewWorkbook with a MySheet tab
+
+<code>os.listdir(here)<code>
+
+
+002_ReadWorkSheet:
+  how:
+  video:
+    name: 002 Read Worksheet
+    description: >
+      Read an Excel formatted spreadsheet workbook using Python
+    tags: [python, python3, excel, virtualenv, office, automate, jupyter notebook, linux]
+
+### Import Modules
+
+<code>import os</code>
+<code>import openpyxl as xl</code>
+### Set Working Directory
+<code>here = os.getcwd()</code>
+### Open Workbook
+<code>wb = xl.load_workbook('{0}/Sample.xlsx'.format(here))</code>
+### Load Worksheet
+<code>sheet = wb['Sheet1']</code>
+## Read Worksheet
+<code>
+colcnt, startrow = 0, 1
+for col in range(len(sheet[str(startrow)])):
+  lock = 0
+  colcnt += 1
+  for cval in self.sheet[getLetter(col)]:
+    if cval.row >= startrow:
+      if cval.value != None and cval.value != '-':
+          data = []
+for col in idCols:
+  names.append(self.sheet[col+str(startrow-1)].value)
+  for col in gCols:#
+    names.append(self.sheet[col+str(startrow-1)].value)#
+    names.pop(len(names)-1)
+    rcnt = 0
+    for row in range(startrow, endrow):#
+      rcnt += 1
+      for col in gCols:#
+        rdata = [self.report,]#
+        for icol in idCols:
+          rdata.append(self.sheet[icol+str(row)].value)#
+          rdata.append(self.sheet[col+str(startrow-1)].value)#
+          rdata.append(self.sheet[col+str(row)].value)#
+          data.append(rdata)#
+      self.rawdata = {'Columns': names, 'Records': data}#
+return self</code>#
+
+###### And now we have a list of column names and a list of lists representing each list as a row of data
+
+003 FormatWorkSheets
+
+video 003 Format Worksheet
+description:
+  Set cell colors, fonts, and borders an Excel formatted spreadsheet workbook using Python
+
+tags: [python, python3, excel, virtualenv, office, automate, jupyter notebook, linux]
+
+### Import Modules
+
+<code>import os<code>
+<code>import openpyxl as xl<code>
+### Set Working Directory
+<code>here = os.getcwd()<code>
+### Create Workbook
+<code>wb = xl.create_workbook()<code>
+### Create Worksheets
+<code>sheet = wb.create_sheet(title='Sheet1')<code>
+### Create Named Format
+<code>FORMAT = {'Font': {'name': 'Calibri','size': 12,'color': 'FFFFFFFF'},
+                'Fill': {'fill_type': 'solid','start_color': 'FF000000', 'end_color': 'FF000000'},
+                'Border': {
+                  'left': {'border_style': 'thin','color': 'FF000000'},
+                  'right': {'border_style': 'thin','color': 'FF000000'},
+                  'top': {'border_style': 'thin','color': 'FF000000'},
+                  'bottom': {'border_style': 'thin','color': 'FF000000'},},
+                'Alignment': {'wrapText': True},
+                'Number': 'General',
+                'Protection': {'locked': False,'hidden': False},}<code>
+### Apply Format
+'### Save WorkBook'
+
+004_WriteWorkSheets:
+  how:
+  video:
+    name: 003 Format Worksheet
+    description: >
+      Write data from a dictionary or table data structure to an excel range
+    tags: [python, python3, excel, virtualenv, office, automate, jupyter notebook, linux]
+
+'# Import Modules'
+<code>'import os</code>
+<code>'import openpyxl as xl'</code>
+'## Set Working Directory'
+<code>here = os.getcwd()</code>
+'### Create Workbook'
+### wb = xl.Workbook()
+'### Create Worksheets'
+<code>sheet1 = wb.create_sheet(title='Sheet1')</code>
+<code>sheet2 = wb.create_sheet(title='Sheet2')</code>
+'### Define Data Dictionary'
+</code>dikt = {'A1': 'Ticker', 'B1': 'Date','C1': 'Price', 'A2': 'GOOG', 'B2': '100.00',
+          'C2': '2006-01-01', 'A3': 'AMZN', 'B3': '100.00','C3': '2006-01-01',
+          'A4': 'AMD', 'B4': '100.00', 'C4': '2006-01-01', 'A5': 'DDD', 'B5': '100.00',
+          'C5': '2006-01-01'}</code>
+'### Write dictionary to worksheet'
+
+<code>
+for key, val in dikt.items():
+  sheet1[key] = val
+</code>
+
+'### Define table of data'
+
+<code>
+table = [
+  ['Ticker', 'Date', 'Price'],
+  ['GOOG', '100.00','2006-01-01'],
+  ['AMZN', '100.00', '2006-01-01'],
+  ['AMD', '100.00', '2006-01-01'],
+  ['DDD','100.00','2006-01-01']]
+</code>
+
+### Write table to worksheet
+
+<code>
+rownum = 1
+for row in table:
+  colnum = 1
+  for val in row:
+    sheet2.cell(column=colnum, row=rownum).value = val
+    colnum += 1
+  rownum += 1
+</code>
+
+'### Save workbook'
+
+<code>name = 'Quotes'</code>
+<code>wb.save(filename='{0}/{1}'.format(here, name))</code>
+
+### You should now have a workbook holding two sheets
+{% endblock %}

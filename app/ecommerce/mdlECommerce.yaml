@@ -1,0 +1,87 @@
+CartModel:
+  name: 'Cart Table Model'
+  description: >
+  columns:
+    cartid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+    username:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    description:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    uuid:
+      dargs: *mdlKWARGa002
+      oargs: ''
+OrderModel:
+  name: 'Order Table Model'
+  description: >
+  columns:
+    orderid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+    username:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    description:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    uuid:
+      dargs: *mdlKWARGa002
+      oargs: ''
+DiscountModel:
+  name: &Otm 'Order Table Model'
+  description: >
+  columns:
+    discountid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+    orderid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+OrderPaymentModel:
+  name: &OPtm 'Order Payment Table Model'
+  description: >
+  columns:
+    orderpaymentid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+    orderid:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    paymentmethodsid:
+      dargs: *mdlKWARGa002
+      oargs: ''
+UserCartModel:
+  name: 'User Cart Table Model'
+  description: >
+  columns:
+    cartid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+    username:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    description:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    uuid:
+      dargs: *mdlKWARGa002
+      oargs: ''
+UserOrderModel:
+  name: 'User Order Table Model'
+  description: >
+  columns:
+    orderid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+    username:
+      dargs: *mdlKWARGa001
+      oargs: ''
+    description:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    uuid:
+      dargs: *mdlKWARGa002
+      oargs: ''

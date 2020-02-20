@@ -1,0 +1,24 @@
+ArticleModel:
+  name: 'Article Model Table'
+  description: >
+  columns:
+    articleid:
+      dargs: *mdlKWARGa000
+      oargs: ''
+    description:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    uuid:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    date:
+      dargs: *mdlKWARGa002
+      oargs: ''
+    text:
+      dargs: *mdlKWARGa002
+      oargs:
+        size: 5000
+    state:
+      dargs: *mdlKWARGa002
+      oargs:
+        size: 10

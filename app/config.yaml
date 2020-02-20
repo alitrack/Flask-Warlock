@@ -1,0 +1,177 @@
+---
+<(META)>:
+  DOCid:
+  name:
+  description: >
+  expirary: '<[expiration]>'
+  version: '<[version]>'
+  path: '<[LEXIvrs]>beaver/ngynFalsk/models.yaml'
+  outline: '<[outline]>'
+  authority: 'document|this'
+  security: 'sec|lvl2'
+  <(WT)>: -32
+modules:
+  'account':
+    description: >
+      Account module connects site system user accounts with other user based data
+      such as contact info, payment info, order info, communication info, etc
+    active: 1
+  'admin':
+    description: >
+    active: 1
+  'article':
+    description: >
+    active: 1
+  'asset':
+    description: >
+    active: 1
+  'blog':
+    description: >
+    active: 1
+  'calendar':
+    description: >
+    active: 1
+  'catalog':
+    description: >
+    active: 1
+  'dataset':
+    description: >
+    active: 1
+  'ecommerce':
+    description: >
+    active: 0
+  'guide':
+    description: >
+    active: 0
+  'inventory':
+    description: >
+    active: 0
+  'library':
+    description: >
+    active: 0
+  'loci':
+    description: >
+    active: 0
+  'report':
+    description: >
+    active: 0
+  'workorder':
+    description: >
+    active: 0
+standards:
+  LANGUAGES: &langs
+    "en":
+      "flag": "gb"
+      "name": "English"
+    "pt":
+      "flag": "pt"
+      "name": "Portuguese"
+    "pt_BR":
+      "flag": "br"
+      "name": "Pt Brazil"
+    "es":
+      "flag": "es"
+      "name": "Spanish"
+    "de":
+      "flag": "de"
+      "name": "German"
+    "zh":
+      "flag": "cn"
+      "name": "Chinese"
+    "ru":
+      "flag": "ru"
+      "name": "Russian"
+    "pl":
+      "flag": "pl"
+      "name": "Polish"
+  ROLES:
+  	"Member": &member
+      - [".*", "can_list"]
+      - [".*", "can_show"]
+      - [".*", "menu_access"]
+      - [".*", "can_get"]
+      - [".*", "can_info"]
+  	"Public": &public
+      - [".*", "can_list"]
+      - [".*", "can_show"]
+      - [".*", "menu_access"]
+      - [".*", "can_get"]
+      - [".*", "can_info"]
+  	"Reader": &reader
+      - [".*", "can_list"]
+      - [".*", "can_show"]
+      - [".*", "menu_access"]
+      - [".*", "can_get"]
+      - [".*", "can_info"]
+  	"Super": &super
+      - [".*", "can_list"]
+      - [".*", "can_show"]
+      - [".*", "menu_access"]
+      - [".*", "can_get"]
+      - [".*", "can_info"]
+  	"Tester": &tester
+      - [".*", "can_list"]
+      - [".*", "can_show"]
+      - [".*", "menu_access"]
+      - [".*", "can_get"]
+      - [".*", "can_info"]
+  THEMES:
+    - "atomiceconomy.css"
+    - "datastrain.css"
+    - "holophotronic.css"
+    - "noatly.css"
+    - "optimizationninja.css"
+    - "organitronic.css"
+    - "plattsburgpass.css"
+    - "politicalstackup.css"
+    - "powerwart.css"
+    - "productivitypanda.css"
+    - "pyffice.css"
+    - "reconstructables.css"
+    - "sb-intra.css"
+    - "solutionsbrewer.css"
+    - "sydobite.css"
+    - "thingery.css"
+    - "tw1nkl3.css"
+    - "twiteconomy.css"
+    - "yousuckatlife.css"
+'sb-intra':
+  APP_NAME: "sb-intra"
+  APP_ICON: "<[here]>static/img/logo.jpg"
+  APP_THEME: 'bootstrap-theme.css'
+  AUTH_TYPE: 'flask_appbuilder.security.manager.AUTH_DB'
+  AUTH_ROLE_ADMIN: 'Admin'
+  AUTH_ROLE_PUBLIC: 'Public'
+  AUTH_USER_REGISTRATION: true
+  AUTH_USER_REGISTRATION_ROLE: "Public"
+  BABEL_DEFAULT_LOCALE: "en"
+  BABEL_DEFAULT_FOLDER: "translations"
+  CSRF_ENABLED: true
+  db:
+    sqlite:
+      SQLALCHEMY_DATABASE_URI: "sqlite:///<[path]>"
+      path: "<[here]>app.db"
+    mysql:
+      SQLALCHEMY_DATABASE_URI: 'mysql://<[site]>@localhost/<[site]>'
+    pgs:
+      SQLALCHEMY_DATABASE_URI: 'postgresql://<[user]>:<[pword]>@<[host]>/<[site]>'
+  FAB_ROLES:
+    "ReadOnly":
+   	"Public":
+   	"Super":
+   	"Member":
+  	"Tester":
+  FLASK_APP:
+  FLASK_ENV:
+  LANGUAGES: 'langs'
+  UPLOAD_FOLDER: "<[here]>app/static/uploads/"
+  IMG_SIZE: [300, 200, true]
+  IMG_UPLOAD_FOLDER: "<[here]>app/static/uploads/"
+  IMG_UPLOAD_URL: "/static/uploads/"
+  RECAPTCHA_USE_SSL: false
+  RECAPTCHA_PUBLIC_KEY: 'public'
+  RECAPTCHA_PRIVATE_KEY: 'private'
+  RECAPTCHA_OPTIONS:
+    'theme': 'white'
+  SESSION_TYPE:
+  SESSION_REDIS:
